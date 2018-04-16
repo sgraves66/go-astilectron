@@ -67,12 +67,13 @@ type Astilectron struct {
 
 // Options represents Astilectron options
 type Options struct {
-	AcceptTCPTimeout   time.Duration
-	AppName            string
-	AppIconDarwinPath  string // Darwin systems requires a specific .icns file
-	AppIconDefaultPath string
-	BaseDirectoryPath  string
-	ElectronSwitches   []string
+	AcceptTCPTimeout      time.Duration
+	AppName               string
+	AppIconDarwinPath     string // Darwin systems requires a specific .icns file
+	AppIconDefaultPath    string
+	BaseDirectoryPath     string
+	BaseDataDirectoryPath string
+	ElectronSwitches      []string
 }
 
 // Supported represents Astilectron supported features
