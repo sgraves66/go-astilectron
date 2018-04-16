@@ -39,7 +39,7 @@ func newPaths(os, arch string, o Options) (p *Paths, err error) {
 
 	// Init other paths
 	//!\\ Order matters
-	p.initDataDirectory(o.AppName)
+	p.initDataDirectory(o.BaseDataDirectoryPath, o.AppName)
 	p.appIconDarwinSrc = o.AppIconDarwinPath
 	p.vendorDirectory = filepath.Join(p.dataDirectory, "vendor")
 	p.provisionStatus = filepath.Join(p.vendorDirectory, "status.json")
@@ -78,7 +78,11 @@ func (p *Paths) initBaseDirectory(baseDirectoryPath string) (err error) {
 	return
 }
 
-func (p *Paths) initDataDirectory(appName string) {
+func (p *Paths) initDataDirectory(basedir string, appName string) {
+	if len(basedir) > 0 {
+		p.dataDirectory = basedir
+		return
+	}
 	if v := os.Getenv("APPDATA"); len(v) > 0 {
 		p.dataDirectory = filepath.Join(v, appName)
 		return
