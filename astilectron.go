@@ -14,8 +14,6 @@ import (
 	"github.com/sgraves66/go-astitools/context"
 	"github.com/sgraves66/go-astitools/exec"
 	"github.com/pkg/errors"
-	"github.com/asticode/go-astitools/context"
-	"github.com/asticode/go-astitools/exec"
 )
 
 // Versions
