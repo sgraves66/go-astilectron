@@ -78,16 +78,21 @@ func (p *Paths) initBaseDirectory(baseDirectoryPath string) (err error) {
 	return
 }
 
-func (p *Paths) initDataDirectory(basedir string, appName string) {
+func (p *Paths) initDataDirectory(basedir string, appName string) (err error) {
 	if len(basedir) > 0 {
 		p.dataDirectory = basedir
-		return
-	}
-	if v := os.Getenv("APPDATA"); len(v) > 0 {
+	} else if v := os.Getenv("APPDATA"); len(v) > 0 {
 		p.dataDirectory = filepath.Join(v, appName)
-		return
+	} else {
+		p.dataDirectory = p.baseDirectory
 	}
-	p.dataDirectory = p.baseDirectory
+
+	// We need the absolute path
+	if p.dataDirectory, err = filepath.Abs(p.dataDirectory); err != nil {
+		err = errors.Wrap(err, "computing absolute path failed")
+	}
+
+	return
 }
 
 // AstilectronDownloadSrc returns the download URL of the (currently platform-independent) astilectron zip file
