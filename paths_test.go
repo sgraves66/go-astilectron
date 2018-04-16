@@ -26,7 +26,7 @@ func TestPaths(t *testing.T) {
 	assert.Equal(t, ep+"/vendor/astilectron/main.js", p.AstilectronApplication())
 	assert.Equal(t, ep+"/vendor/astilectron", p.AstilectronDirectory())
 	assert.Equal(t, ep+"/vendor/astilectron-v"+VersionAstilectron+".zip", p.AstilectronDownloadDst())
-	assert.Equal(t, "https://github.com/asticode/astilectron/archive/v"+VersionAstilectron+".zip", p.AstilectronDownloadSrc())
+	assert.Equal(t, "https://github.com/sgraves66/astilectron/archive/v"+VersionAstilectron+".zip", p.AstilectronDownloadSrc())
 	assert.Equal(t, ep+"/vendor/astilectron-v"+VersionAstilectron+".zip/astilectron-"+VersionAstilectron, p.AstilectronUnzipSrc())
 	assert.Equal(t, ep+"/vendor/electron-linux-amd64", p.ElectronDirectory())
 	assert.Equal(t, ep+"/vendor/electron-linux-amd64-v"+VersionElectron+".zip", p.ElectronDownloadDst())

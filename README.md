@@ -1,28 +1,28 @@
-[![GoReportCard](http://goreportcard.com/badge/github.com/asticode/go-astilectron)](http://goreportcard.com/report/github.com/asticode/go-astilectron)
-[![GoDoc](https://godoc.org/github.com/asticode/go-astilectron?status.svg)](https://godoc.org/github.com/asticode/go-astilectron)
+[![GoReportCard](http://goreportcard.com/badge/github.com/sgraves66/go-astilectron)](http://goreportcard.com/report/github.com/sgraves66/go-astilectron)
+[![GoDoc](https://godoc.org/github.com/sgraves66/go-astilectron?status.svg)](https://godoc.org/github.com/sgraves66/go-astilectron)
 [![Travis](https://travis-ci.org/asticode/go-astilectron.svg?branch=master)](https://travis-ci.org/asticode/go-astilectron#)
 [![Coveralls](https://coveralls.io/repos/github/asticode/go-astilectron/badge.svg?branch=master)](https://coveralls.io/repos/github/asticode/go-astilectron)
 
-Thanks to `go-astilectron` build cross platform GUI apps with GO and HTML/JS/CSS. It is the official GO bindings of [astilectron](https://github.com/asticode/astilectron) and is powered by [Electron](https://github.com/electron/electron).
+Thanks to `go-astilectron` build cross platform GUI apps with GO and HTML/JS/CSS. It is the official GO bindings of [astilectron](https://github.com/sgraves66/astilectron) and is powered by [Electron](https://github.com/electron/electron).
 
 # Demo
 
-To see a minimal Astilectron app, checkout out the [demo](https://github.com/asticode/go-astilectron-demo).
+To see a minimal Astilectron app, checkout out the [demo](https://github.com/sgraves66/go-astilectron-demo).
 
-It uses the [bootstrap](https://github.com/asticode/go-astilectron-bootstrap) and the [bundler](https://github.com/asticode/go-astilectron-bundler).
+It uses the [bootstrap](https://github.com/sgraves66/go-astilectron-bootstrap) and the [bundler](https://github.com/sgraves66/go-astilectron-bundler).
 
 # Real-life examples
 
 Here's a list of awesome projects using `go-astilectron` (if you're using `go-astilectron` and want your project to be listed here please submit a PR):
 
-- [go-astivid](https://github.com/asticode/go-astivid) Video tools written in GO
+- [go-astivid](https://github.com/sgraves66/go-astivid) Video tools written in GO
 - [GroupMatcher](https://github.com/veecue/GroupMatcher) Program to allocate persons to groups while trying to fulfill all the given wishes as good as possible
 - [ipeye-onvif](https://github.com/deepch/ipeye-onvif) ONVIF Search Tool
 
 
 # Bootstrap
 
-For convenience purposes, a [bootstrap](https://github.com/asticode/go-astilectron-bootstrap) has been implemented.
+For convenience purposes, a [bootstrap](https://github.com/sgraves66/go-astilectron-bootstrap) has been implemented.
 
 The bootstrap allows you to quickly create a one-window application.
 
@@ -32,7 +32,7 @@ If you decide to use it, read thoroughly the documentation as you'll have to str
 
 # Bundler
 
-Still for convenience purposes, a [bundler](https://github.com/asticode/go-astilectron-bundler) has been implemented.
+Still for convenience purposes, a [bundler](https://github.com/sgraves66/go-astilectron-bundler) has been implemented.
 
 The bundler allows you to bundle your app for every os/arch combinations and get a nice set of files to send your users.
 
@@ -44,7 +44,7 @@ WARNING: the code below doesn't handle errors for readibility purposes. However 
 
 To import `go-astilectron` run:
 
-    $ go get -u github.com/asticode/go-astilectron
+    $ go get -u github.com/sgraves66/go-astilectron
 
 ## Start `go-astilectron`
 
@@ -65,9 +65,9 @@ a.Start()
 a.Wait()
 ```
 
-For everything to work properly we need to fetch 2 dependencies : [astilectron](https://github.com/asticode/astilectron) and [Electron](https://github.com/electron/electron). `.Start()` takes care of it by downloading the sources and setting them up properly.
+For everything to work properly we need to fetch 2 dependencies : [astilectron](https://github.com/sgraves66/astilectron) and [Electron](https://github.com/electron/electron). `.Start()` takes care of it by downloading the sources and setting them up properly.
 
-In case you want to embed the sources in the binary to keep a unique binary you can use the **NewDisembedderProvisioner** function to get the proper **Provisioner** and attach it to `go-astilectron` with `.SetProvisioner(p Provisioner)`. Or you can use the [bootstrap](https://github.com/asticode/go-astilectron-bootstrap) and the [bundler](https://github.com/asticode/go-astilectron-bundler). Check out the [demo](https://github.com/asticode/go-astilectron-demo) to see how to use them.
+In case you want to embed the sources in the binary to keep a unique binary you can use the **NewDisembedderProvisioner** function to get the proper **Provisioner** and attach it to `go-astilectron` with `.SetProvisioner(p Provisioner)`. Or you can use the [bootstrap](https://github.com/sgraves66/go-astilectron-bootstrap) and the [bundler](https://github.com/sgraves66/go-astilectron-bundler). Check out the [demo](https://github.com/sgraves66/go-astilectron-demo) to see how to use them.
 
 Beware when trying to add your own app icon as you'll need 2 icons : one compatible with MacOSX (.icns) and one compatible with the rest (.png for instance).
 
@@ -118,7 +118,7 @@ time.Sleep(time.Second)
 w.Maximize()
 ```
     
-Check out the [Window doc](https://godoc.org/github.com/asticode/go-astilectron#Window) for a list of all exported methods
+Check out the [Window doc](https://godoc.org/github.com/sgraves66/go-astilectron#Window) for a list of all exported methods
 
 ## Send messages from GO to Javascript
 

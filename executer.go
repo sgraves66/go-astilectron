@@ -4,7 +4,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/asticode/go-astilog"
+	"github.com/sgraves66/go-astilog"
 	"github.com/pkg/errors"
 )
 

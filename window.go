@@ -4,9 +4,9 @@ import (
 	"net/url"
 	"sync"
 
-	"github.com/asticode/go-astilog"
-	"github.com/asticode/go-astitools/context"
-	"github.com/asticode/go-astitools/url"
+	"github.com/sgraves66/go-astilog"
+	"github.com/sgraves66/go-astitools/context"
+	"github.com/sgraves66/go-astitools/url"
 	"github.com/pkg/errors"
 )
 

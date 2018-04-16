@@ -7,11 +7,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/asticode/go-astilog"
-	"github.com/asticode/go-astitools/context"
-	"github.com/asticode/go-astitools/http"
-	"github.com/asticode/go-astitools/io"
-	"github.com/asticode/go-astitools/zip"
+	"github.com/sgraves66/go-astilog"
+	"github.com/sgraves66/go-astitools/context"
+	"github.com/sgraves66/go-astitools/http"
+	"github.com/sgraves66/go-astitools/io"
+	"github.com/sgraves66/go-astitools/zip"
 	"github.com/pkg/errors"
 )
 
