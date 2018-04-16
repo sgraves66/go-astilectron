@@ -39,7 +39,10 @@ func newPaths(os, arch string, o Options) (p *Paths, err error) {
 
 	// Init other paths
 	//!\\ Order matters
-	p.initDataDirectory(o.BaseDataDirectoryPath, o.AppName)
+	if err = p.initDataDirectory(o.BaseDataDirectoryPath, o.AppName); err != nil {
+		err = errors.Wrap(err, "initializing data directory failed")
+		return
+	}
 	p.appIconDarwinSrc = o.AppIconDarwinPath
 	p.vendorDirectory = filepath.Join(p.dataDirectory, "vendor")
 	p.provisionStatus = filepath.Join(p.vendorDirectory, "status.json")
